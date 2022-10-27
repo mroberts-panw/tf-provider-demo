@@ -1,0 +1,15 @@
+---
+metadata:
+  name: "build_only_policy_2: a code policy created with terraform"
+  severity: "high"
+  guidelines: "fix it"
+  category: "general"
+scope:
+  provider: "aws"
+definition:
+  cond_type: "attribute"
+  resource_types:
+    - "aws_instance"
+  attribute: "instance_type"
+  operator: "not_equals"
+  value: "t3.micro"
